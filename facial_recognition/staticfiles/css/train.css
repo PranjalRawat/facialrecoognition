@@ -1,0 +1,24 @@
+header {
+    position: relative;
+    height: 100px !important;
+    min-height: 100px !important;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.head{
+    font-size:3em;
+    font-weight: bold;
+    color:peru;
+}
+.upload{
+    text-align: center;
+    font-size:20px;
+    font-weight: 800;
+}
+.form{
+    margin:4% 0;
+}
+#multi{
+    margin-top:60px;
+}

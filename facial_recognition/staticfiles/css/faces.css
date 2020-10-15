@@ -1,0 +1,29 @@
+header {
+    position: relative;
+    height: 100px !important;
+    min-height: 100px !important;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.head{
+    font-size:3em;
+    font-weight: bold;
+}
+.detail{
+    margin:0 50px;
+}
+.row{
+    display:flex;
+    text-align: center;
+}
+span{
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    font-style: italic;
+}
+.heading::first-letter {
+    font-size: 200%;
+    color: #8A2BE2;
+    
+}

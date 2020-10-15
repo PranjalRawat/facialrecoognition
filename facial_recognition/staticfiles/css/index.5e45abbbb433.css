@@ -1,0 +1,147 @@
+
+body{
+    position:relative;
+    background-color: #fff !important;
+    max-width:100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size:20px;
+}
+
+.home{
+    background: url("/static/images/background.30aed6d8dc6f.jpg") 50% no-repeat ;
+    -webkit-background-size:cover !important;
+    background-size: cover !important;
+    max-height:610px;
+    position:relative;
+    margin-top: 48px;
+}
+header {
+    position: relative;
+    height: 700px;
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+  
+/* primary navigation
+--------------------------------------------------------------------- */
+#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+/* nav-wrap */
+#nav-wrap {
+  font: 16px 'opensans-bold', sans-serif;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin: 0 auto;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #022f46 !important;
+}
+.opaque { background-color: #333; }
+
+/* hide toggle button */
+#nav-wrap > a.mobile-btn { display: none; }
+
+ul#nav {
+  min-height: 48px;
+  width: auto;
+
+  /* center align the menu */
+  text-align: center;
+}
+ul#nav li {
+  position: relative;
+  list-style: none;
+  height: 48px;
+  display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+  display: inline-block;
+  padding: 8px 18px;
+  line-height: 32px;
+  text-decoration: none;
+  text-align: left;
+  color: #fff;
+  font-size:16px;
+  font-family: Comic Sans MS !important;
+  font-weight: bold !important;
+
+}
+
+
+
+/* vertically center banner section */
+header:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+header .banner {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 85%;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+header .banner-text { width: 100%; }
+header .banner-text h1 {
+  font: 90px/1.1em 'opensans-bold', sans-serif;
+  color: #fff;
+  letter-spacing: -2px;
+  margin: 0 auto 18px auto;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+}
+
+
+
+/* Contents */
+
+.center_heading{
+    text-align: center;
+    font-weight: 600;
+    font-size:30px;
+}
+
+.desc{
+    padding: 30px 60px;
+}
+
+.odd{
+  padding:50px;
+}
+.even{
+  padding:50px;
+  background-color:#022f46;
+  color:#fff;
+}
+p::first-letter {
+  font-size: 200%;
+  color: #8A2BE2;
+}
+.desc_img{
+  width:100%;
+  text-align:center;
+  max-height:400px;
+  margin-top:50px;
+}
+.desc_pos{
+  width:100%;
+  text-align:center;
+  max-height:400px;
+  margin-top:50px;
+}
