@@ -1,0 +1,58 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Face Recognition System</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/media-queries.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/train.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript" src="{% static 'js/smoothscroll.js' %}"></script>
+    
+    
+  </head>
+  <body>
+
+  <div class="navi">
+    <header id="home">
+    
+      <nav id="nav-wrap">
+        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+        <ul id="nav" >
+            <li><a class="smoothscroll" href="{% url 'index' %}">Home</a></li>
+            <li><a class="smoothscroll" href="{% url 'train' %}">Train</a></li>
+            <li><a class="smoothscroll" href="{% url 'recognize' %}">Recognize</a></li>
+            <li><a class="smoothscroll" href="{% url 'delete' %}">Delete</a></li>
+            <li><a class="smoothscroll" href="{% url 'dataset' %}">Dataset</a></li>
+        </ul> <!-- end #nav -->
+      </nav> <!-- end #nav-wrap -->
+    </header>
+  </div>
+
+  <div class="upload">
+      <h1 class="head">Train Dataset</h1>
+      <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        : Title : <br><br><input type="text" name="title" required placeholder="Seperated by '_'" width="200px"><br>
+        <input type="file" name="file" webkitdirectory directory id ='multi' required>
+        <button type="submit">Train</button>
+      </form>
+      <p>{{sucess}} {{title}}</p>
+  </div>
+  
+  <body>
+</html>

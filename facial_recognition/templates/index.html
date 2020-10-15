@@ -1,0 +1,146 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Face Recognition System</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/media-queries.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript" src="{% static 'js/smoothscroll.js' %}"></script>
+    
+    
+  </head>
+  <body>
+
+  <div class="home">
+    <header id="home">
+    
+      <nav id="nav-wrap">
+        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+        <ul id="nav" >
+            <li><a class="smoothscroll" href="{% url 'index' %}">Home</a></li>
+            <li><a class="smoothscroll" href="{% url 'train' %}">Train</a></li>
+            <li><a class="smoothscroll" href="{% url 'recognize' %}">Recognize</a></li>
+            <li><a class="smoothscroll" href="{% url 'delete' %}">Delete</a></li>
+            <li><a class="smoothscroll" href="{% url 'dataset' %}">Dataset</a></li>
+        </ul> <!-- end #nav -->
+      </nav> <!-- end #nav-wrap -->
+    
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">Face Recognition</h1>
+         </div>
+      </div>
+
+  </header>
+  </div>
+  <div>
+      <div class= "odd">
+        <h3 class = 'center_heading'>Why Face recognition ?</h3>
+        <div class="desc">
+        <p>
+          Face recognition is a method of identifying or verifying the identity of an individual using their face. Face recognition systems can be used to identify people in photos, video, or in real-time. Law enforcement may also use mobile devices to identify people during police stops.
+        </p>
+          Facial biometrics continues to be the preferred biometric benchmark. 
+
+          That's because it's easy to deploy and implement. There is no physical interaction required by the end-user. 
+
+          Moreover, face detection and face match processes for verification/identification are speedy. 
+        </div>
+      </div>
+
+      <div class = 'even'>
+        <h3 class = 'center_heading'>How Face Recognition Works?</h3>
+        <div class="desc">
+        <p>
+          Facial recognition is the process of identifying or verifying the identity of a person using their face. It captures, analyzes, and compares patterns based on the person's facial details.
+
+          <ol>
+            <li>  The face detection process is an essential step as it detects and locates human faces in images and videos.</li>
+            <li>The face capture process transforms analog information (a face) into a set of digital information (data) based on the person's facial features.</li>
+            <li>The face match process verifies if two faces belong to the same person.</li>
+          </ol>
+            Today it's considered to be the most natural of all biometric measurements.  
+          </p>
+        </div>
+      </div>
+
+      <div class = 'odd'>
+        <h3 class = 'center_heading'>Companies Working on Face Recognition</h3>
+        <div class="desc_pos">
+          <img src="{% static "images/poster.png" %}" alt="My image" width="70%">
+        </div>
+      </div>
+
+      
+
+      <div class = "even">
+        <h3 class = 'center_heading'>Difficulties in Face Recognition ?</h3>
+        <p class="desc">
+          Face is the most essential part of the human body, and its unique features make it even more crucial in identifying humans.
+          Face recognition data can be prone to error, which can implicate people for crimes they haven’t committed. Facial recognition software is particularly bad at recognizing African Americans and other ethnic minorities, women, and young people, often misidentifying or failing to identify them, disparately impacting certain groups. some challenges are ubiquitous while developing face recognition technology such as pose, occlusion, expressions, ageing.
+        </p>
+      </div>
+
+      <div class = 'odd'>
+        <h3 class = 'center_heading'>Face Recognition Market Size</h3>
+        <div class="desc_img">
+          <img src="{% static "images/market_cap.jpg" %}" alt="My image" width="60%">
+          
+        </div>
+      </div>
+
+      <div class = "even">
+        <p class="desc">
+          Global Facial Recognition Market Report, published by Variant Market Research, forecast that the global market is expected to reach $15.4 Billion by 2024 from $3.3 Billion in 2016; growing at a CAGR of 21.4% from 2016 to 2024. A facial recognition system is a biometric technology of verifying or identifying an individual from a digital image or a video frame from a video source. It is typically executed by comparing selected facial features from the image and a face database.
+        </p>
+      </div>
+
+      <div class= "odd">
+        <h3 class = 'center_heading'>Where Face recognition is Used</h3>
+        <div class="desc">
+        <p>
+          While face recognition has been around in one form or another since the 1960s, recent technological developments have led to a wide proliferation of this technology. This technology is no longer seen as something out of science fiction movies. 
+        </p>
+        <p>
+          Below are some ways that face recognition is currently being used to make the world safer, smarter and more convenient. 
+        </p>
+          <ul>
+              <li>Prevent Retail Crime</li>
+              <li>Unlock Phones</li>
+              <li>Smarter Advertising</li>
+              <li>Find Missing Persons</li>
+              <li>Help the Blind</li>
+              <li>Protect Law Enforcement</li>
+              <li>Identify People on Social Media Platforms</li>
+              <li>Diagnose Diseases</li>
+              <li>Track School Attendance</li>
+              <li>Facilitate Secure Transactions</li>
+              <li>Validate Identity at ATMs</li>
+              <li>Track Attendance at Church</li>
+              <li>Control Access to Sensitive Areas</li>
+              <li>Find Lost Pets</li>
+          </ul> 
+        </div>
+      </div>
+
+
+
+    </div>
+    
+  </body>
+</html>
