@@ -1,2 +1,2 @@
-web: gunicorn portfolio.wsgi --log-file -
+web: gunicorn facial_recognition.wsgi --log-file -
 
