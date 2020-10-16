@@ -74,9 +74,9 @@ def recognizer():
         
         
 
-        cv2.imshow(filename, image)
-        cv2.waitKey(4000)
-        cv2.destroyAllWindows() 
+        # cv2.imshow(filename, image)
+        # cv2.waitKey(4000)
+        # cv2.destroyAllWindows() 
 
     end = time.time()    
     processed_time = (end-start)
