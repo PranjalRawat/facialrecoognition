@@ -14,7 +14,7 @@ def recognizer():
     TOLERANCE = 0.6
     FRAME_THICKENESS = 3
     FONT_THICKENESS = 2
-    MODEL = "cnn"  #hog cnn
+    MODEL = "hog"  #hog cnn
     TOTAL = 0 
     li=[]
 
