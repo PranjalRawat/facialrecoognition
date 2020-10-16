@@ -8,10 +8,10 @@ import os
 import shutil
 from facial_recognition.settings.local import BASE_DIR
 from django.core.files.storage import FileSystemStorage
-from .train_dataset import train
+from .train_dataset import trainn
 from .recognize import recognizer
 from .data import faces
-from .delete_face_from_dataset import delete
+from .delete_face_from_dataset import deletee
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http.response import HttpResponseRedirect
 
@@ -38,7 +38,7 @@ class train(FormView):
             fs = FileSystemStorage(location=(str(BASE_DIR) +'/known_faces/'+ str(title)+'/'))
             for f in files:
                 filename = fs.save(f.name,f)
-            train()
+            trainn()
             shutil.rmtree(str(BASE_DIR) +'/known_faces/')
             context = {
                 "sucess": 'Sucessfully Trained dataset for',
@@ -91,7 +91,8 @@ class delete(FormView):
         
         if form.is_valid():
             title = form.cleaned_data['title'] 
-            a=delete(title)
+            
+            a = deletee(title)
             if a:
                 context = {
                     "sucess": 'Sucessfully Deleted data for',

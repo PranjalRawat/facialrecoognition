@@ -1,4 +1,4 @@
-def delete(self,title):
+def deletee(title):
     import face_recognition
     import cv2
     import os

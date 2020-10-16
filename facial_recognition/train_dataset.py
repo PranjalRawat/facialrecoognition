@@ -1,4 +1,4 @@
-def train():
+def trainn():
     import face_recognition
     import cv2
     import os
