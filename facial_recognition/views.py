@@ -8,10 +8,10 @@ import os
 import shutil
 from facial_recognition.settings.local import BASE_DIR
 from django.core.files.storage import FileSystemStorage
-import facial_recognition.train_dataset as train_set
-import facial_recognition.recognize as recognizer
-import facial_recognition.data as data
-import facial_recognition.delete_face_from_dataset as delete_data
+from .train_dataset import train
+from .recognize import recognizer
+from .data import faces
+from .delete_face_from_dataset import delete
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http.response import HttpResponseRedirect
 
@@ -38,7 +38,7 @@ class train(FormView):
             fs = FileSystemStorage(location=(str(BASE_DIR) +'/known_faces/'+ str(title)+'/'))
             for f in files:
                 filename = fs.save(f.name,f)
-            train_set.train()
+            train()
             shutil.rmtree(str(BASE_DIR) +'/known_faces/')
             context = {
                 "sucess": 'Sucessfully Trained dataset for',
@@ -66,7 +66,7 @@ class recognize(FormView,SuccessMessageMixin):
             for f in files:
                 filename = fs.save(f.name,f)
             
-            success_message = recognizer.recognize()
+            success_message = recognizer()
             shutil.rmtree(str(BASE_DIR) +'/unknown_faces/')
             context = {
                 "faces": success_message[0],
@@ -91,7 +91,7 @@ class delete(FormView):
         
         if form.is_valid():
             title = form.cleaned_data['title'] 
-            a=delete_data.delete(title)
+            a=delete(title)
             if a:
                 context = {
                     "sucess": 'Sucessfully Deleted data for',
@@ -112,7 +112,7 @@ class delete(FormView):
 def dataset(request):
     template_name = 'faces.html'
        
-    li = data.faces()
+    li = faces()
     a=[]
     for i in li:
         a.append(i.replace('_',' '))
